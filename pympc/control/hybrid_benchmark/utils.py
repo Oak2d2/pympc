@@ -128,7 +128,7 @@ def get_constraint_set(prog):
     v_id = {v: i for i, v in enumerate(vs)}
     nv = len(vs)
     P = Polyhedron(np.zeros((0, nv)), np.zeros(0))
-    print 'Getting constraint set:'
+    print('Getting constraint set:')
     for i, v in enumerate(vs):
         print('Variable %d on %d\r' % (i,nv)),
         if v.getAttr(grb.GRB.Attr.LB) != -grb.GRB.INFINITY:

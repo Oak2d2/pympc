@@ -6,10 +6,10 @@ from copy import copy
 
 # internal inputs
 from pympc.optimization.programs import linear_program
-from build_mip_mld import bild_mip_mld
-from build_mip_bm import bild_mip_bm
-from build_mip_ch import bild_mip_ch
-from build_mip_pf import bild_mip_pf
+from pympc.control.hybrid_benchmark.build_mip_mld import bild_mip_mld
+from pympc.control.hybrid_benchmark.build_mip_bm import bild_mip_bm
+from pympc.control.hybrid_benchmark.build_mip_ch import bild_mip_ch
+from pympc.control.hybrid_benchmark.build_mip_pf import bild_mip_pf
 
 class HybridModelPredictiveController(object):
 

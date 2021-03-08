@@ -107,13 +107,13 @@ class Printer(object):
         Prints the first row of the table, the one with the titles of the columns.
         '''
 
-        print '|',
-        print 'Updates'.center(self.column_width) + '|',
-        print 'Time (s)'.center(self.column_width) + '|',
-        print 'Nodes (#)'.center(self.column_width) + '|',
-        print 'Lower bound'.center(self.column_width) + '|',
-        print 'Upper bound'.center(self.column_width) + '|'
-        print (' ' + '-' * (self.column_width + 1)) * 5
+        print('|'),
+        print('Updates'.center(self.column_width) + '|'),
+        print('Time (s)'.center(self.column_width) + '|'),
+        print('Nodes (#)'.center(self.column_width) + '|'),
+        print('Lower bound'.center(self.column_width) + '|'),
+        print('Upper bound'.center(self.column_width) + '|')
+        print(' ' + '-' * (self.column_width + 1)) * 5
 
     def print_new_row(self, updates):
         '''
@@ -125,12 +125,12 @@ class Printer(object):
             Updates to write in the first column of the table.
         '''
 
-        print ' ',
-        print updates.ljust(self.column_width+1),
-        print ('%.3f' % (time() - self.tic)).ljust(self.column_width+1),
-        print ('%d' % self.explored_nodes).ljust(self.column_width+1),
-        print ('%.3f' % self.lower_bound).ljust(self.column_width+1),
-        print ('%.3f' % self.upper_bound).ljust(self.column_width+1)
+        print(' '),
+        print(updates.ljust(self.column_width+1)),
+        print(('%.3f' % (time() - self.tic)).ljust(self.column_width+1)),
+        print(('%d' % self.explored_nodes).ljust(self.column_width+1)),
+        print(('%.3f' % self.lower_bound).ljust(self.column_width+1)),
+        print(('%.3f' % self.upper_bound).ljust(self.column_width+1))
 
 
     def print_and_update(self, lower_bound, upper_bound):
@@ -192,14 +192,14 @@ class Printer(object):
         	self.print_new_row('Solution found')
 
         # print nodes and time
-        print '\nExplored %d nodes in %.3f seconds:' % (self.explored_nodes, time() - self.tic),
+        print('\nExplored %d nodes in %.3f seconds:' % (self.explored_nodes, time() - self.tic)),
 
         # print bounds
         if self.upper_bound == inf:
-            print 'problem is infeasible.'
+            print('problem is infeasible.')
         else:
-            print 'feasible solution found with objective %.3f.' % self.upper_bound
-            print 'The best lower bound is %.3f (tolerance set to %.3f).' % (self.lower_bound, tol)
+            print('feasible solution found with objective %.3f.' % self.upper_bound)
+            print('The best lower bound is %.3f (tolerance set to %.3f).' % (self.lower_bound, tol))
         
 class Drawer(object):
     '''

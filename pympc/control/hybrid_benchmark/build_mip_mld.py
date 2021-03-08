@@ -112,7 +112,7 @@ def bigm_dynamics(S):
         # max/min over i
         M1 = np.maximum.reduce([M1, np.array(M1_i)])
         M2 = np.minimum.reduce([M2, np.array(M2_i)])
-
+        
     return M1, M2
 
 def bigm_domains(S):
